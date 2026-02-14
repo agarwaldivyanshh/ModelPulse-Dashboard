@@ -1,73 +1,115 @@
-# Welcome to your Lovable project
+# ModelPulse — ML Model Monitoring Dashboard
 
-## Project info
+ModelPulse is a frontend simulation of a production-grade ML model monitoring system.  
+It demonstrates how modern AI infrastructure dashboards visualize model health, performance metrics, and inference logs in real time.
 
-**URL**: https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID
+This project focuses on state-driven UI, time-series data visualization, and realistic monitoring behavior without requiring a backend.
 
-## How can I edit this code?
+---
 
-There are several ways of editing your application.
+## 🚀 Live Demo
 
-**Use Lovable**
+(Deploy link here after Vercel deployment)
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and start prompting.
+---
 
-Changes made via Lovable will be committed automatically to this repo.
+## 🧠 Overview
 
-**Use your preferred IDE**
+ModelPulse simulates a real-world AI platform dashboard used to monitor deployed machine learning models.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+The dashboard allows users to:
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+- Switch between multiple ML models
+- View deployment health status
+- Monitor accuracy and latency trends
+- Track drift score
+- Analyze inference logs
+- Simulate live metric refresh behavior
 
-Follow these steps:
+The goal of this project is to replicate how ML observability systems function from a frontend perspective.
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+---
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## ✨ Key Features
 
-# Step 3: Install the necessary dependencies.
-npm i
+### Multi-Model Support
+- Supports multiple simulated models (Healthy, Degraded, Failed states)
+- Switching models dynamically updates metrics, charts, and logs
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+### Time-Series Performance Tracking
+- Toggle between 24h / 7d / 30d views
+- Accuracy and latency visualization using line charts
 
-**Edit a file directly in GitHub**
+### Deployment Health States
+- Color-coded system status indicators
+- Status influences metrics to simulate realistic behavior
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
+### Drift Monitoring
+- Displays model drift score
+- Color-coded stability indication
 
-**Use GitHub Codespaces**
+### Simulated Live Refresh
+- Manual refresh with metric jitter
+- "Last updated" counter
+- Mimics real-time monitoring systems
 
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
+### Inference Logs
+- Paginated logs
+- Response time and status tracking
+- Status-aware failure distribution
 
-## What technologies are used for this project?
+---
 
-This project is built with:
+## 🛠 Tech Stack
 
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
+- **React**
+- **TypeScript**
+- **Tailwind CSS**
+- **Recharts**
+- **Lucide Icons**
+- **React Query (setup for extensibility)**
 
-## How can I deploy this project?
+---
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+## 📂 Project Structure
 
-## Can I connect a custom domain to my Lovable project?
+src/
+components/
+dashboard/
+Sidebar
+OverviewCard
+PerformanceChart
+MetricCard
+DriftCard
+LogsTable
+ModelSelector
+data/
+models.ts
+pages/
+Index.tsx
 
-Yes, you can!
+The project follows a modular component-based architecture to maintain separation of concerns.
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+---
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+## 🔄 How It Works
+
+All model data is stored locally in structured JSON-like objects.
+
+Each model contains:
+
+- Metrics
+- Time-series datasets
+- Deployment status
+- Drift score
+- Logs array
+
+UI state determines:
+- Active model
+- Selected time range
+- Refresh simulation
+
+This approach mimics how a real monitoring frontend would interact with a backend API.
+
+---
+
