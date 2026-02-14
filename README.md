@@ -9,7 +9,7 @@ This project focuses on state-driven UI, time-series data visualization, and rea
 
 ## 🚀 Live Demo
 
-(Deploy link here after Vercel deployment)
+https://model-pulse.vercel.app/
 
 ---
 
